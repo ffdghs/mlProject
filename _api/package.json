@@ -3,20 +3,27 @@
   "version": "1.0.0",
   "description": "api Node for malouProject",
   "main": "./src/index.js",
-  "type": "module",
   "scripts": {
     "dev": "nodemon ./src/index.js",
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "build": "babel ./src -d ./lib && node ./lib/index.js"
   },
   "author": "Nicolas Nielsen",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
     "graphql-request": "^3.4.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2",
     "nodemon": "^2.0.7"
   }
 }

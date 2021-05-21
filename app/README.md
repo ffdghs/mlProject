@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# APP
+
+## Getting started
+
+### Prerequisite
+
+All these programs must be installed beforehand:
+
+- [Node.js v15+](https://nodejs.org)
+- [Angular v11+](https://angular.io/cli)
+- [Yarn](https://yarnpkg.com/)
+
+### Initialize the project
+
+1. Open a terminal
+2. Go to the project directory
+3. Run `yarn install`
+
+### Run a development environment
+
+This will start the server
+
+```sh
+ng serve
+```

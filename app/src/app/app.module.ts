@@ -8,9 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './partials/header/header.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-
-
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,6 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxChartsModule,
     BrowserAnimationsModule,
     NgbModule,
   ],

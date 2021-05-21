@@ -1,21 +1,44 @@
 <div class="container">
-  <p>Simple datepicker</p>
 
-  <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" (click)="getProducts()"></ngb-datepicker>
+  <ngb-datepicker
+    #dp [(ngModel)]="model"
+    (navigate)="date = $event.next"
+    (click)="getProducts()"
+  ></ngb-datepicker>
 
-  <hr/>
+  <hr class="mt-5 mb-5"/>
 
-  <button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
-  <button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
-  <button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
-
-  <hr/>
-
-  <pre>Month: {{ date.month }}.{{ date.year }}</pre>
-  <pre>Model: {{ model | json }}</pre>
-  <pre>{{ body }}</pre>
-  <pre>{{ result }}</pre>
+  <div class="row">
+    <div class="col">
+      <h3>Products :</h3>
+    </div>
+  </div>
+  <div class="row justify-content-around mt-3">
+    <div class="col-4 d-flex flex-wrap justify-content-between">
+      <app-product-card
+        *ngFor="let result of results"
+        class="mb-5"
+        [nameProduct]="result.node.name"
+        [descriptionProduct]="result.node.tagline"
+        [urlProduct]="result.node.url"
+      ></app-product-card>
+    </div>
+    <div class="col-8">
+      <ngx-charts-pie-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="categories"
+        [gradient]="gradient"
+        [legend]="showLegend"
+        [legendPosition]="legendPosition"
+        [labels]="showLabels"
+        [doughnut]="isDoughnut"
+        >
+      </ngx-charts-pie-chart>
+    </div>
+  </div>
 </div>
+
 
 
 

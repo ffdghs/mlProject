@@ -63,6 +63,8 @@ export class DatePickerComponent {
           }
         }
         this.getNumberCategories();
+      }).catch(error => {
+        console.log(error);
       });
   }
 
